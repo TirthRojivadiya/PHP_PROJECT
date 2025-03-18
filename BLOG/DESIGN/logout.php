@@ -1,0 +1,10 @@
+<?php
+session_start();
+if(!isset($_SESSION['USERID']))
+{
+	header("location:signin.php");
+	exit();
+}
+session_destroy();
+header("location:signin.php");
+?>
